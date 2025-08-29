@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="Main" stylesheets="@anhstyles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nvd.dich.PrimaryController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text_Title" text="Ứng dụng dịch" />
+      <HBox prefHeight="246.0" prefWidth="579.0" styleClass="Main">
+         <children>
+            <VBox prefHeight="198.0" prefWidth="242.0" styleClass="Main">
+               <children>
+                  <Text fx:id="txtTA" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text" text="Tiếng anh" />
+                  <TextArea fx:id="txtDuocDich" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#handleDoiNgonNgu" text="=&gt;" />
+            <VBox fx:id="vbTiengViet" prefHeight="198.0" prefWidth="242.0" styleClass="Main">
+               <children>
+                  <Text fx:id="txtTV" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Text" text="Tiếng việt" />
+                  <TextArea fx:id="txtDich" editable="false" prefHeight="200.0" prefWidth="200.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <ComboBox fx:id="cbThemes" editable="true" opacity="0.0" prefWidth="150.0" />
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="Main">
+         <children>
+            <Button mnemonicParsing="false" onAction="#handleDich" styleClass="Button" text="Dịch" />
+            <Button mnemonicParsing="false" onAction="#handleThemTuVung" styleClass="Button" text="Thêm từ vựng" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
